@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  gds_ephem_etl:
+    image: gleytonlima/gds-ephem-etl
+    container_name: gds_ephem_etl
+    ports:
+      - 8081:8081
+    env_file:
+      - .env
+networks:
+  default:
+    external:
+      name: gds_default
